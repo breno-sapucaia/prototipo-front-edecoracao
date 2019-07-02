@@ -1,0 +1,29 @@
+:root{
+    --blue: #007bff;
+    --dark:#1D2124;
+    --aside-menu-width: 280px;
+    --header-height:45px;
+}
+.app {
+    height:100vh;
+    background-color:#f1f1f1;
+    font-family: 'Montserrat', sans-serif;
+    display:grid;
+    grid-template-columns:var(--aside-menu-width) 1fr;
+    grid-template-rows:var(--header-height) 1fr;
+}
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+.menu-is-active{
+    grid-template-areas:
+    "header header"
+    "menu main";
+}
+.menu-isnt-active{
+    grid-template-areas:
+    "header header"
+    "main main";
+}

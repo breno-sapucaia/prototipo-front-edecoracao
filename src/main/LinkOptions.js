@@ -102,9 +102,21 @@ export const sallesOptions = () => {
         },
         {
             id:15,
-            name:'Fluxo de Caixa',
-            icon:'fa fa-stack-overflow',
-            path:'/cadastros/pedidos'
+            name:'Notas Fiscais',
+            icon:'fa fa-sticky-note',
+            path:'/cadastros/nota-fiscal'
+        },
+        {
+            id:16,
+            name:'Comissões',
+            icon:'fa fa-star',
+            path:'/cadastros/comissao'
+        },
+        {
+            id:17,
+            name:'Relatório',
+            icon:'fa fa-bar-chart',
+            path:'/cadastros/relatorios'
         }
 
     ]

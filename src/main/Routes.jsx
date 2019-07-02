@@ -10,7 +10,7 @@ export default props =>
                 path={item.path} 
                 component={item.component} />
             )}
-
+        
         <Route to="/" component={Index} />
         <Redirect from='*' to="/" />
     </Switch>

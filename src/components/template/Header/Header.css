@@ -1,14 +1,11 @@
 header.header{
     
-    font-family: 'Montserrat', sans-serif;
-    background-color: var(--blue);
+    font-family: 'Roboto', sans-serif;
+   
     
     grid-area:header;
-
-    display:grid;
-    grid-template-columns:var(--aside-menu-width) 1fr 400px;
-    grid-template-areas: "left mid right"
 }
+/* 
 header.header .left{
     display:flex;
     align-self: center;
@@ -55,7 +52,7 @@ header.header .right{
     display:flex;
     align-items:center;
     height:45px;
-    /* background-color:red; */
+    background-color:red;
     list-style: none;
     width:100%;
 }
@@ -75,7 +72,7 @@ header.header .mid ul.menu-list .menu-list-item:hover{
 }
 header.header .right {
     display:flex;
-    /* background-color:red; */
+    background-color:red;
     align-items:center;
     justify-content: space-around;
     color:#fff;
@@ -85,7 +82,7 @@ header.header .right:last-child {
 }
 header.header .right .fa-bell{
     font-size:0.8em;
-}
+} */
 
 /* header.header .right .suport,
 header.header .right .login{

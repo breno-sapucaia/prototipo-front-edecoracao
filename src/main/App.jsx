@@ -29,6 +29,7 @@ export default class App extends Component {
 
   selectMenu(e) {
     const menuItemSelected = e.target.textContent;
+    console.log(menuItemSelected)
     this.setState({ menuItemSelected })
     this.setState({ toggleMenu: true });
 
@@ -49,6 +50,7 @@ export default class App extends Component {
         <div className={this.state.toggleMenu ? 'app menu-is-active' : 'app menu-isnt-active'}>
 
           <Header
+            items={this.state.items}
             toggleMenu={this.toggleMenu}
             toggleMenuTrue={this.toggleMenuTrue}
             selectMenu={e => this.selectMenu(e)}

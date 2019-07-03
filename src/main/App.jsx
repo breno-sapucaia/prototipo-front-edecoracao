@@ -41,7 +41,7 @@ export default class App extends Component {
       this.setState({ staticItems })
     } 
     this.setState({ staticItems })
-
+    console.log(this.state)
   }
   render() {
     return (

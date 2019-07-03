@@ -9,7 +9,7 @@ class WayToGo extends Component {
     }
     render() { 
         return ( 
-            <Link to={this.props.path} className="waytogo text-muted">
+            <Link to={this.props.path} className={"waytogo "+ this.props.color}>
                 <i className={this.props.icon}></i>
                 {this.props.name}
             </Link>

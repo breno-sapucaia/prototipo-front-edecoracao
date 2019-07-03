@@ -18,7 +18,7 @@ export default class Menu extends Component {
                 <ul className="list d-flex flex-column">
                 { this.props.items.map(item => 
                     <li  key={item.id} className='list-item d-flex text-muted'>
-                        <WayToGo  name={item.name} icon={item.icon} path={item.path} ></WayToGo>
+                        <WayToGo color={'text-muted'} name={item.name} icon={item.icon} path={item.path} ></WayToGo>
                     </li>            
                 )}
                 

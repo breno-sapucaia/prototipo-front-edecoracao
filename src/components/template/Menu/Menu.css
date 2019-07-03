@@ -1,11 +1,13 @@
 nav.menu{
     grid-area:menu;
+    
+
 }
 
 .is-active{
     border-left:3px solid var(--blue);
 }
-@media(min-width:0px) and (max-width:992px){
+@media(min-width:0px) and (max-width:990px){
     nav.menu{
         display:none;
     }

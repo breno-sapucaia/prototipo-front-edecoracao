@@ -1,5 +1,5 @@
 .waytogo>:first-child{
-    margin-right:10px;
+    margin-right:15px;
     
 }
 .waytogo:any-link{
@@ -8,6 +8,7 @@
 .waytogo{
     padding:10px 15px;
     width:100%;
+    font-size:0.9em;
     /* background-color: red; */
 }
 .waytogo:hover{

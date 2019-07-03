@@ -16,7 +16,7 @@ export default class Index extends Component {
             <main className="main">
                 <div className="jumbotron m-3 p-3 bg-white">
                     <h1 className="display-5">
-                        Bem Vindo ao edecoração<sub>erp</sub>
+                        Bem Vindo ao edecoração
                     </h1>
                     <p className="lead">Gerencie sua loja com praticidade e autonomia!</p>
                     <hr className="my-4"/>

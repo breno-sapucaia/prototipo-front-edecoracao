@@ -2,7 +2,7 @@ header.header{
     
     font-family: 'Roboto', sans-serif;
    
-    
+    z-index:3000;
     grid-area:header;
 }
 /* 

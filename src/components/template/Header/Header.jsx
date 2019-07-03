@@ -13,23 +13,20 @@ export default class Header extends Component {
 
         
     }
-    static getDerivedStateFromProps(nextProps, prevState) {
-        const items=nextProps.items
-        
-        return {items}
-    }
+    
     componentDidMount(){
         window.addEventListener("resize", this.updateDimensions);
+        console.log(this.props)
     }
     componentWillUnmount() {
         window.removeEventListener("resize", this.updateDimensions);
     }
     updateDimensions() {
-         this.setState({
+         this.setState((state)=>({
                 height: window.innerHeight, 
                 width: window.innerWidth
-            });
-        console.log('width:'+this.state.width+'   - height:'+this.state.height)
+            }));
+        console.log(this.props)
       }
     render() {
         return (
@@ -42,29 +39,39 @@ export default class Header extends Component {
                     
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mr-auto">
-                            <li className="nav-item active">
-                                <span className="nav-link">Dashboard</span>
-                            </li>
-                            <li className={this.state.width < 998 ? 'nav-item dropdown' : 'nav-item'}>
-                                <span onClick={this.props.selectMenu}className={this.state.width < 998 ? 'nav-link dropdown-toggle':'nav-link' } id="navbarDropdown" role="button" data-toggle={this.state.width < 998 ? 'dropdown':''} aria-haspopup="true" aria-expanded="false">
-                                    Cadastros
+                        <li className={this.state.width < 998 ? 'nav-item dropdown' : 'nav-item'}>
+                                <span onClick={this.props.selectMenu} className={this.state.width < 998 ? 'nav-link dropdown-toggle':'nav-link' } id="navbarDropdown" role="button" data-toggle={this.state.width < 998 ? 'dropdown':''} aria-haspopup="true" aria-expanded="false">
+                                    Dashboard
                                 </span>
                                 <div className={this.state.width < 998 ? 'dropdown-menu bg-primary border-0':'d-none'} aria-labelledby="navbarDropdown">
                                     
-                                { this.props.items.map(item => 
+                                { this.props.dashboardItems.map(item => 
                                     <span  key={item.id} className='dropdown-item'>
-                                        <WayToGo  name={item.name} icon={item.icon} path={item.path} ></WayToGo>
+                                        <WayToGo name={item.name} icon={item.icon} path={item.path} ></WayToGo>
                                     </span>            
                                 )}
                                 </div>
                             </li>
                             <li className={this.state.width < 998 ? 'nav-item dropdown' : 'nav-item'}>
-                                <span onClick={this.props.selectMenu}className={this.state.width < 998 ? 'nav-link dropdown-toggle':'nav-link' } id="navbarDropdown" role="button" data-toggle={this.state.width < 998 ? 'dropdown':''} aria-haspopup="true" aria-expanded="false">
+                                <span onClick={this.props.selectMenu} className={this.state.width < 998 ? 'nav-link dropdown-toggle':'nav-link' } id="navbarDropdown" role="button" data-toggle={this.state.width < 998 ? 'dropdown':''} aria-haspopup="true" aria-expanded="false">
+                                    Cadastros
+                                </span>
+                                <div className={this.state.width < 998 ? 'dropdown-menu bg-primary border-0':'d-none'} aria-labelledby="navbarDropdown">
+                                    
+                                { this.props.registerItems.map(item => 
+                                    <span  key={item.id} className='dropdown-item'>
+                                        <WayToGo name={item.name} icon={item.icon} path={item.path} ></WayToGo>
+                                    </span>            
+                                )}
+                                </div>
+                            </li>
+                            <li className={this.state.width < 998 ? 'nav-item dropdown' : 'nav-item'}>
+                                <span onClick={this.props.selectMenu} className={this.state.width < 998 ? 'nav-link dropdown-toggle':'nav-link' } id="navbarDropdown" role="button" data-toggle={this.state.width < 998 ? 'dropdown':''} aria-haspopup="true" aria-expanded="false">
                                     Vendas
                                 </span>
                                 <div className={this.state.width < 998 ? 'dropdown-menu bg-primary border-0':'d-none'} aria-labelledby="navbarDropdown">
                                     
-                                { this.props.items.map(item => 
+                                { this.props.sallesItems.map(item => 
                                     <span  key={item.id} className='dropdown-item'>
                                         <WayToGo  name={item.name} icon={item.icon} path={item.path} ></WayToGo>
                                     </span>            

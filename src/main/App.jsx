@@ -5,7 +5,7 @@ import './App.css'
 import Routes from './Routes'
 import { BrowserRouter as Router } from 'react-router-dom'
 
-import { inicioOptions, cadastrosOptions, sallesOptions } from './LinkOptions'
+import { items, register, salles, dashboard } from './LinkOptions'
 
 export default class App extends Component {
 
@@ -17,7 +17,8 @@ export default class App extends Component {
 
     this.state = {
       toggleMenu: true,
-      items: inicioOptions()
+      items: items,
+      staticItems: dashboard()
     };
   }
 
@@ -25,23 +26,21 @@ export default class App extends Component {
     this.setState({ toggleMenu: !this.state.toggleMenu });
   }
 
-  
 
   selectMenu(e) {
     const menuItemSelected = e.target.textContent;
     console.log(menuItemSelected)
     this.setState({ menuItemSelected })
-    this.setState({ toggleMenu: true });
-
-    let items = inicioOptions();
+    
+    let staticItems = dashboard();
     if (menuItemSelected === 'Cadastros') {
-      items = cadastrosOptions()
-      this.setState({ items })
+      staticItems = register()
+      this.setState({ staticItems })
     } else if (menuItemSelected === 'Vendas') {
-      items = sallesOptions()
-      this.setState({ items })
-    }
-    this.setState({ items })
+      staticItems = salles()
+      this.setState({ staticItems })
+    } 
+    this.setState({ staticItems })
 
   }
   render() {
@@ -50,7 +49,9 @@ export default class App extends Component {
         <div className={this.state.toggleMenu ? 'app menu-is-active' : 'app menu-isnt-active'}>
 
           <Header
-            items={this.state.items}
+            dashboardItems={this.state.items.dashboard}
+            registerItems={this.state.items.register}
+            sallesItems={this.state.items.salles}
             toggleMenu={this.toggleMenu}
             toggleMenuTrue={this.toggleMenuTrue}
             selectMenu={e => this.selectMenu(e)}
@@ -58,7 +59,7 @@ export default class App extends Component {
 
           <Menu
             toggleMenu={this.state.toggleMenu}
-            items={this.state.items}
+            items={this.state.staticItems}
           />
 
           <Routes items={this.state.items} />

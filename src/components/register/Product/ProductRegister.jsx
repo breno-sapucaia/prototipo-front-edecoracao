@@ -9,7 +9,7 @@ class ProductRegister extends Component {
     render() {
         return (
             <main className="main">
-                <div className="header-form container ">
+                <div className=" container ">
                     <div className="row mt-3">
                     <h2 className="col-12 col-md-6">Protudos</h2>
                     <div className="input-group mb-3 col-md-6 col-12 ">

@@ -29,7 +29,7 @@ export default class Header extends Component {
     render() {
         return (
             <header className="header ">
-                <nav className="navbar navbar-expand-md navbar-light bg-primary">
+                <nav className="navbar navbar-expand-md navbar-dark bg-primary">
                     <span></span>
                     <button className="navbar-toggler aling-self-end" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>

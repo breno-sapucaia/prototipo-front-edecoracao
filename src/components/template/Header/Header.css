@@ -11,7 +11,7 @@ header.header{
     border:0 !important; 
     border-radius: 0 !important;
     padding:0 !important;
-    height: 48px;
+    /* height: 48px; */
 }
 .navbar .navbar-toggler,
 .navbar .navbar-toggler:hover,
@@ -20,14 +20,18 @@ header.header{
     cursor:pointer !important;
     border:0 !important;
     box-shadow:none !important;
-
+    outline:0 !important;
+    color:#fff !important;
+    
 }
 
 .navbar .navbar-toggler .navbar-toggler-icon {
     color: rgb(255, 255, 255) !important;
     background-color:transparent;
     cursor:pointer !important;
-
+    border-color:#fff !important;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    
 }
 
 .azul{

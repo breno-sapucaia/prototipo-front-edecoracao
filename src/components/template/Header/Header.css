@@ -44,7 +44,7 @@ header.header{
     background-color:#0065DC;
     
 }
-.nav-link{
+.custom-nav-link-header{
     cursor:pointer;
     vertical-align: middle;
     line-height: 48px;

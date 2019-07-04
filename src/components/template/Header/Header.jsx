@@ -39,11 +39,11 @@ export default class Header extends Component {
                         <ul className="navbar-nav mr-auto">
                         <li className={this.state.width < 990 ? 'nav-item dropdown' : 'nav-item'}>
                                 
-                                <span onClick={this.props.selectMenu} className={this.state.width < 990 ? 'd-none':'nav-link text-white' } >
+                                <span onClick={this.props.selectMenu} className={this.state.width < 990 ? 'd-none':'nav-link custom-nav-link-header text-white' } >
                                     Dashboard 
                                 </span>
                                 
-                                <span onClick={this.props.selectMenu} className={this.state.width < 990 ? 'nav-link dropdown-toggle text-white':'d-none' } id="navbarDropdown"  data-toggle={this.state.width  <990 ? 'dropdown':''} aria-haspopup="true" aria-expanded="false">
+                                <span onClick={this.props.selectMenu} className={this.state.width < 990 ? 'nav-link custom-nav-link-header pl-1 dropdown-toggle text-white':'d-none' } id="navbarDropdown"  data-toggle={this.state.width  <990 ? 'dropdown':''} aria-haspopup="true" aria-expanded="false">
                                     Dashboard 
                                 </span>
                                 <div className={this.state.width < 990 ? 'dropdown-menu azul border-0':'d-none'} aria-labelledby="navbarDropdown">
@@ -57,10 +57,10 @@ export default class Header extends Component {
                             </li>
                             <li className={this.state.width < 990 ? 'nav-item dropdown ' : 'nav-item'}>
                                 
-                                <span onClick={this.props.selectMenu} className={this.state.width < 990 ? 'd-none':'nav-link text-white' } >
+                                <span onClick={this.props.selectMenu} className={this.state.width < 990 ? 'd-none':'nav-link custom-nav-link-header text-white' } >
                                     Cadastros 
                                 </span>
-                                <span onClick={this.props.selectMenu} className={this.state.width < 990 ? 'nav-link dropdown-toggle text-white':'d-none' } id="navbarDropdown" role="button" data-toggle={this.state.width < 990 ? 'dropdown':''} aria-haspopup="true" aria-expanded="false">
+                                <span onClick={this.props.selectMenu} className={this.state.width < 990 ? 'nav-link custom-nav-link-header pl-1 dropdown-toggle text-white':'d-none' } id="navbarDropdown" role="button" data-toggle={this.state.width < 990 ? 'dropdown':''} aria-haspopup="true" aria-expanded="false">
                                     Cadastros
                                 </span>
                                 <div className={this.state.width < 990 ? 'dropdown-menu azul border-0':'d-none'} aria-labelledby="navbarDropdown">
@@ -74,11 +74,11 @@ export default class Header extends Component {
                             </li>
                             <li className={this.state.width < 990 ? 'nav-item dropdown' : 'nav-item'}>
                                 
-                                <span onClick={this.props.selectMenu} className={this.state.width < 990 ? 'd-none':'nav-link text-white' } >
+                                <span onClick={this.props.selectMenu} className={this.state.width < 990 ? 'd-none':'nav-link custom-nav-link-header text-white' } >
                                     Vendas
                                 </span>
                                 
-                                <span onClick={this.props.selectMenu} className={this.state.width < 990 ? 'nav-link dropdown-toggle text-white':'d-none' } id="navbarDropdown" role="button" data-toggle={this.state.width < 990 ? 'dropdown':''} aria-haspopup="true" aria-expanded="false">
+                                <span onClick={this.props.selectMenu} className={this.state.width < 990 ? 'nav-link  custom-nav-link-header pl-1 dropdown-toggle text-white':'d-none' } id="navbarDropdown" role="button" data-toggle={this.state.width < 990 ? 'dropdown':''} aria-haspopup="true" aria-expanded="false">
                                     Vendas
                                 </span>
                                 <div className={this.state.width < 990 ? 'dropdown-menu azul border-0':'d-none'} aria-labelledby="navbarDropdown">
@@ -94,10 +94,6 @@ export default class Header extends Component {
 
                     </div>
                 </nav>
-
-
-
-
             </header>
 
         );

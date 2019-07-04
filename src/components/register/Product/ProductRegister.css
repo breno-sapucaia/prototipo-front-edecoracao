@@ -1,0 +1,21 @@
+.customize-dropdown-toggle:hover,
+.customize-dropdown-toggle:focus,
+.customize-dropdown-toggle:active,
+.customize-dropdown-toggle.active
+{
+    background-color: #fff!important;
+    color:#000 !important;
+}
+.custom-nav-item{
+    position:relative;    
+    justify-self: flex-end !important;
+    align-self: flex-end !important ;
+    display:flex !important;
+}
+.custom-nav-product-filter {
+    
+}
+.custom-filter-row{
+    margin:0 .25em;
+    border-bottom:1px solid #aaa !important;
+}

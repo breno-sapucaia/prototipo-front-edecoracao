@@ -11,15 +11,22 @@
     font-size:0.9em;
     /* background-color: red; */
 }
-.waytogo:hover{
-    padding:10px 12px;
-    border-left:3px solid var(--blue);
-    color:var(--dark)!important;
-    background-color:#ddd;
+@media(min-width:992px){
+    .waytogo:hover{
+        padding:10px 12px;
+        border-left:3px solid var(--blue);
+        color:var(--dark)!important;
+        background-color:#ddd;
+    }
 }
 .is-active{
     border-left:3px solid var(--blue);
     padding:10px 12px;
     color:var(--dark)!important;
     background-color:#ddd;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #16181b !important;
+    text-decoration: none !important;
+    background-color: #fff4;
 }

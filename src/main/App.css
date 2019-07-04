@@ -1,7 +1,7 @@
 :root{
     --blue: #007bff;
     --dark:#1D2124;
-    --aside-menu-width:220px;
+    --aside-menu-width:250px;
     --header-height:auto;
 }
 .app {

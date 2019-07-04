@@ -20,9 +20,9 @@ class ProductRegister extends Component {
                         </div>
                     </div>
                     <div className="row d-flex justify-content-between custom-filter-row">
-                        <ul className="nav nav-pills ml-3 mr-3 custom-nav-product-filter">
+                        <ul className="nav nav-pills  custom-nav-product-filter">
                             <li className="nav-item ">
-                                <span className="nav-link pl-1 pr-1 ">Todos</span>
+                                <span className="nav-link  pr-1 ">Todos</span>
                             </li>
                             <li className="nav-item ">
                                 <span className="nav-link pl-1 pr-1 ">Cliente</span>

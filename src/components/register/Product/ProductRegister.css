@@ -12,8 +12,8 @@
     align-self: flex-end !important ;
     display:flex !important;
 }
-.custom-nav-product-filter {
-    
+.custom-nav-product-filter>li>span {
+    padding:.5em .3em !important;
 }
 .custom-filter-row{
     margin:0 .25em;

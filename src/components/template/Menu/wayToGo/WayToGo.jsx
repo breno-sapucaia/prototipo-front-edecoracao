@@ -15,7 +15,7 @@ class WayToGo extends Component {
             <Link to={this.props.path} className={"waytogo "+ this.props.color}>
                 <i data-tip data-for={this.props.name} id="icone"   className={this.props.icon+' p-3 pr-1 pl-1'}></i>
                 <span id="texto" className={this.props.legendActive ? 'd-none d-lg-block':'d-none d-lg-none'}>{this.props.name}</span>
-                <ReactTooltip id={this.props.name} type='info'>
+                <ReactTooltip id={this.props.name} type='info' className={this.props.legendActive ? 'd-none':'d-block'}>
                     <span>{this.props.name}</span>
                 </ReactTooltip>
             </Link>
@@ -30,9 +30,9 @@ class WayToGoDown extends Component {
     }
     render() { 
         return ( 
-            <Link to={this.props.path} className={"waytogo "+ this.props.color}>
-                <i id="icone"   className={this.props.icon+' p-3 pr-1 pl-1'} ></i>
-                <span id="texto" >{this.props.name}</span>
+            <Link to={this.props.path} className="watogodown pl-3 pb-2" >
+                <i id="iconedown"   className={this.props.icon+' pr-3'} ></i>
+                <span id="textodown" >{this.props.name}</span>
             </Link>
          );
     }

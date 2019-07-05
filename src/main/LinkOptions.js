@@ -50,9 +50,15 @@ const items = {
     register:[
         {
             id:8,
-            name:'Clientes e Fornecedores',
+            name:'Clientes',
             icon:'fa fa-users',
-            path:'/cadastros/clientes-e-fornecedores'
+            path:'/cadastros/fornecedores'
+        },
+        {
+            id:18,
+            name:'Fornecedores',
+            icon:'fa fa-truck',
+            path:'/cadastros/fornecedores'
         },
         {
             id:9,
@@ -75,9 +81,15 @@ const items = {
         },
         {
             id:12,
-            name:'Funcinários e Cargos',
-            icon:'fa fa-cogs',
-            path:'/cadastros/usuario-e-cargos'
+            name:'Cargos',
+            icon:'fa fa-suitcase',
+            path:'/cadastros/cargos'
+        },
+        {
+            id:13,
+            name:'Funcionários',
+            icon:'fa fa-user',
+            path:'/cadastros/funcionarios'
         }
     ],
     salles: [

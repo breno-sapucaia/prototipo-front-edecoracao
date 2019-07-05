@@ -11,8 +11,22 @@
     border-right:3px solid transparent;
     /* background-color: red; */
 }
+.watogodown:any-link{
+    text-decoration:none;
+}
+.watogodown{
+    width:100%;
+    font-size:0.9em;
+    display:flex;
+    align-items: center;
+    color:#fff;
+}
 #icone{
     font-size:18px;
+}
+#texto{
+    width:112px;
+    
 }
 .waytogo:hover{
     border-left:3px solid var(--blue);
@@ -28,8 +42,21 @@
     color:var(--dark)!important;
     background-color:#ddd;
 }
+
+.custom-header-dropdown-item {
+    display: block;
+    width: 100%;
+    padding:0;
+    clear: both;
+    font-weight: 400;
+    color:#fff;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
 .dropdown-item:focus, .dropdown-item:hover {
-    color: #16181b !important;
+    color: #aaa !important;
     text-decoration: none !important;
-    background-color: #fff4;
+    background-color:transparent !important;
 }

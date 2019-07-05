@@ -10,29 +10,38 @@ header.header{
     max-height: 35px;
 }
 .custom-toggle-icon{
-    
+    border:1px solid transparent;
     color:#fff;
-    font-size:18px;
+    font-size:20px;
     cursor:pointer;
     font-weight: 100;
 }
 .custom-toggle-icon:hover{
-    color:var(--blue);
-    font-size:18px;
-    background-color:rgba(0,0,0,0.01);
-    border-radius:5px;
+    color:#000;
+    
+}
+.navbar{
+    padding:0 1em !important;
+    
 }
 
-
-
-
-/*  
-.navbar{
-    background-color:#0065DC !important;
-    border:0 !important; 
-    border-radius: 0 !important;
-    padding:0 !important;
-    height: 48px;
+@media (min-width: 576px){
+.custom-header-nav-link {
+        padding: 0 .5em !important;
+        line-height:45px;
+    }
+    .custom-header-nav-link:hover{
+        cursor:pointer;
+        background-color:rgba(255,255,255,0.1);
+    } 
+}
+.navbar .navbar-toggler .navbar-toggler-icon {
+    color: rgb(255, 255, 255) !important;
+    background-color:transparent;
+    cursor:pointer !important;
+    border-color:#fff !important;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    
 }
 .navbar .navbar-toggler,
 .navbar .navbar-toggler:hover,
@@ -45,15 +54,18 @@ header.header{
     color:#fff !important;
     
 }
-
-.navbar .navbar-toggler .navbar-toggler-icon {
-    color: rgb(255, 255, 255) !important;
-    background-color:transparent;
-    cursor:pointer !important;
-    border-color:#fff !important;
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-    
+.custom-header-dropdown-menu{
+    background-color:var(--blue);
 }
+/*  
+.navbar{
+    background-color:#0065DC !important;
+    border:0 !important; 
+    border-radius: 0 !important;
+    padding:0 !important;
+    height: 48px;
+}
+
 
 .azul{
     background-color:#0065DC;

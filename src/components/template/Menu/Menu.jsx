@@ -20,6 +20,8 @@ export default class Menu extends Component {
                 { this.props.items.map(item => 
                     <li  key={item.id} className='list-item d-flex text-muted'>
                         <WayToGo legendActive={this.props.legendActive} color={'text-muted'} name={item.name} icon={item.icon} path={item.path} ></WayToGo>
+                        
+                        
                     </li>            
                 )}
                 

@@ -15,7 +15,9 @@ class WayToGo extends Component {
             <Link to={this.props.path} className={"waytogo "+ this.props.color}>
                 <i data-tip data-for={this.props.name} id="icone"   className={this.props.icon+' p-3 pr-1 pl-1'}></i>
                 <span id="texto" className={this.props.legendActive ? 'd-none d-lg-block':'d-none d-lg-none'}>{this.props.name}</span>
-                {rendertoltip()}
+                <ReactTooltip id={this.props.name} type='info'>
+                    <span>{this.props.name}</span>
+                </ReactTooltip>
             </Link>
          );
     }
@@ -36,16 +38,6 @@ class WayToGoDown extends Component {
     }
 }
  
-function rendertoltip(){
-    if(window.innerWidth <= 578) {
-        return 
-    }else{
-        return <ReactTooltip id={this.props.name} type='info'>
-                <span>{this.props.name}</span>
-            </ReactTooltip>
-    }
-}
-
 export {WayToGoDown}
 
 export default WayToGo;

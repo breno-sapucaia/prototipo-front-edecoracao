@@ -42,7 +42,7 @@ const items = {
         },
         {
             id:7,
-            name:'Configuracoes',
+            name:'Configurações',
             icon:'fa fa-cogs',
             path:'/configuracoes'
         }

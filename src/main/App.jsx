@@ -13,12 +13,14 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.toggleMenu = this.toggleMenu.bind(this);
-    this.selectMenu = this.selectMenu.bind(this)
+    this.selectMenu = this.selectMenu.bind(this);
+    this.handleLegendActive = this.handleLegendActive.bind(this);
 
     this.state = {
       toggleMenu: true,
       items: items,
-      staticItems: dashboard()
+      staticItems: dashboard(),
+      legendActive: false
     };
   }
 
@@ -26,6 +28,10 @@ export default class App extends Component {
     this.setState({ toggleMenu: !this.state.toggleMenu });
   }
 
+  handleLegendActive(){
+    this.setState({ legendActive: !this.state.legendActive})
+    console.log(this.state.legendActive)
+  }
 
   selectMenu(e) {
     const menuItemSelected = e.target.textContent;
@@ -41,7 +47,7 @@ export default class App extends Component {
       this.setState({ staticItems })
     } 
     this.setState({ staticItems })
-    console.log(this.state)
+    
   }
   render() {
     return (
@@ -55,9 +61,12 @@ export default class App extends Component {
             toggleMenu={this.toggleMenu}
             toggleMenuTrue={this.toggleMenuTrue}
             selectMenu={e => this.selectMenu(e)}
+            handleLegendActive={this.handleLegendActive}
           />
 
           <Menu
+            
+            legendActive={this.state.legendActive}
             toggleMenu={this.state.toggleMenu}
             items={this.state.staticItems}
           />

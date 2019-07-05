@@ -11,14 +11,15 @@ export default class Menu extends Component {
         }
     }
     
+   
 
     render() { 
         return ( 
-            <nav className={this.props.toggleMenu ? 'menu':'menu d-none'}>
+            <nav className=' d-none d-sm-block '>
                 <ul className="list d-flex flex-column">
                 { this.props.items.map(item => 
                     <li  key={item.id} className='list-item d-flex text-muted'>
-                        <WayToGo color={'text-muted'} name={item.name} icon={item.icon} path={item.path} ></WayToGo>
+                        <WayToGo legendActive={this.props.legendActive} color={'text-muted'} name={item.name} icon={item.icon} path={item.path} ></WayToGo>
                     </li>            
                 )}
                 

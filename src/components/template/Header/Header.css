@@ -1,13 +1,11 @@
 header.header{
-    
-    font-family: 'Roboto', sans-serif;
-    font-size:1em;
     z-index:3000;
     grid-area:header;
+    background-color:#0065DC!important;
 }
 
 .logo>img{
-    max-height: 35px;
+    max-height: 25px;
 }
 .custom-toggle-icon{
     border:1px solid transparent;
@@ -20,6 +18,10 @@ header.header{
     color:#000;
     
 }
+a{
+    text-decoration:none !important;
+    color:#d7e1ec !important;
+}
 .navbar{
     padding:0 1em !important;
     
@@ -28,7 +30,7 @@ header.header{
 @media (min-width: 576px){
 .custom-header-nav-link {
         padding: 0 .5em !important;
-        line-height:45px;
+        line-height:50px;
     }
     .custom-header-nav-link:hover{
         cursor:pointer;

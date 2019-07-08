@@ -5,7 +5,7 @@ import 'font-awesome/css/font-awesome.min.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './main/App.jsx';
+import App from './main/App.js';
 
 
 ReactDOM.render(<App />, document.getElementById('root'));

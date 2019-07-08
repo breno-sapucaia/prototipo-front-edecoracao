@@ -4,11 +4,15 @@
     --aside-menu-width:auto;
     --header-height:auto;
 }
+
+html, body{
+    font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+}
+
 .app {
     height:100vh;
     background-color:#f1f1f1;
-    font-family: 'Roboto', sans-serif;
-
     display:grid;
     grid-template-columns:var(--aside-menu-width) 1fr;
     grid-template-rows:var(--header-height) 1fr;
@@ -16,11 +20,14 @@
     "header header"
     "menu main";
 }
-*{
+
+
+
+/* *{
     margin:0px;
     padding:0px;
     box-sizing:border-box;
-}
+} */
 
 main.main {
     grid-area:main;

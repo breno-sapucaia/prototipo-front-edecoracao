@@ -3,7 +3,9 @@ nav.menu{
     
 
 }
-
+ul{
+    padding-inline-start: 0%;
+}
 .is-active{
     border-left:3px solid var(--blue);
 }

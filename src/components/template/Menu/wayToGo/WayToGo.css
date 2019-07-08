@@ -14,19 +14,29 @@
 .watogodown:any-link{
     text-decoration:none;
 }
+.wayotogo-child{
+    display:flex;
+    align-items: center; 
+    
+    text-align: left;
+}
 .watogodown{
     width:100%;
     font-size:0.9em;
     display:flex;
     align-items: center;
     color:#fff;
-}
-#icone{
-    font-size:18px;
-}
-#texto{
-    width:112px;
     
+}
+
+#texto{
+    width:144px;
+    
+}
+.icone{
+    font-size:1.5em;
+    text-align: center;
+    width:50px;
 }
 .waytogo:hover{
     border-left:3px solid var(--blue);

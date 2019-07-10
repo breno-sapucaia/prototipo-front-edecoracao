@@ -2,7 +2,8 @@
 .customize-dropdown-toggle:hover,
 .customize-dropdown-toggle:focus,
 .customize-dropdown-toggle:active,
-.customize-dropdown-toggle.active
+.customize-dropdown-toggle.active,
+.customize-dropdown-toggle.show
 {
     background-color: #fff!important;
     color:#000 !important;
@@ -54,4 +55,25 @@
 }
 .radio-cell{
     width:15px;
+}
+.name-cell{
+    display:flex;
+    justify-content: space-between;
+}
+.infos{
+    display:none;
+    
+}
+@media(max-width:578px){
+
+.table-row-show{
+    display:table-row;
+}
+}
+.show-information{
+    cursor:pointer;
+}
+.table thead th {
+    vertical-align: bottom;
+    border-bottom:0;
 }

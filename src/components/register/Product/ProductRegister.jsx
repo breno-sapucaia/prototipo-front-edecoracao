@@ -78,7 +78,7 @@ class ProductRegister extends Component {
               </li>
             </ul>
             <ul className="nav nav-pills mr-1">
-              <li className="nav-item  dropdown">
+              <li className="nav-item  dropdown edited">
                 <span
                   className="nav-link dropdown-toggle customize-dropdown-toggle"
                   data-toggle="dropdown"
@@ -89,11 +89,11 @@ class ProductRegister extends Component {
                   Filtros
                 </span>
                 <div className="dropdown-menu filter-custom-dropdown">
-                  <span className="dropdown-item ">aqui</span>
-                  <span className="dropdown-item ">serão</span>
-                  <span className="dropdown-item ">os filtors</span>
+                  <span className="dropdown-item a-from-nav">aqui</span>
+                  <span className="dropdown-item a-from-nav">serão</span>
+                  <span className="dropdown-item a-from-nav">os filtors</span>
                   <div className="dropdown-divider" />
-                  <span className="dropdown-item">de pesquisa</span>
+                  <span className="dropdown-item a-from-nav">de pesquisa</span>
                 </div>
               </li>
             </ul>
@@ -103,9 +103,9 @@ class ProductRegister extends Component {
             <button className="btn btn-outline-info mr-2">
               <i className="fa fa-print styled-icon" /> Imprimir
             </button>
-            <div class="dropdown">
+            <div className="dropdown">
               <button
-                class="btn btn-default text-blue dropdown-toggle"
+                className="btn btn-default text-blue dropdown-toggle"
                 type="button"
                 id="dropdownMenuButton"
                 data-toggle="dropdown"
@@ -114,25 +114,25 @@ class ProductRegister extends Component {
               >
                 Mais ações
               </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 {/* eslint-disable-next-line */}
-                <a class="dropdown-item a-from-nav " href="javascript:void(0)">
+                <a className="dropdown-item a-from-nav " href="javascript:void(0)">
                   <i className="fa fa-dollar styled-icon" />
                   Reajustar preços dos produtos
                 </a>
                 {/* eslint-disable-next-line */}
-                <a class="dropdown-item a-from-nav" href="javascript:void(0)">
+                <a className="dropdown-item a-from-nav" href="javascript:void(0)">
                   <i className="fa fa-edit styled-icon" />
                   Editar CEST dos produtos em lote
                 </a>
                 <div className="dropdown-divider" />
                 {/* eslint-disable-next-line */}
-                <a class="dropdown-item a-from-nav" href="javascript:void(0)">
+                <a className="dropdown-item a-from-nav" href="javascript:void(0)">
                   <i className="fa fa-upload styled-icon" />
                   Exportar produtos para planilha
                 </a>
                 {/* eslint-disable-next-line */}
-                <a class="dropdown-item a-from-nav" href="javascript:void(0)">
+                <a className="dropdown-item a-from-nav" href="javascript:void(0)">
                   <i className="fa fa-download styled-icon" />
                   Importar produtos de uma planilha
                 </a>
@@ -140,34 +140,52 @@ class ProductRegister extends Component {
             </div>
           </div>
           <div className="row">
-            <table class="table table-striped">
+            <table className="table table-hover">
               <thead>
                 <tr>
                   <th className="radio-cell" scope="col"><input type="checkbox" name="input-header" id="input-header"/></th>
                   <th scope="col">Nome</th>
-                  <th scope="col">Preço de Venda</th>
-                  <th scope="col">Estoque</th>
+                  <th className="d-none d-sm-table-cell" scope="col">Preço de Venda</th>
+                  <th className="d-none d-sm-table-cell" scope="col">Estoque</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <th className="radio-cell"scope="row"><input type="checkbox" name="input-header" id="input-header"/></th>
-                  <td>PAPEL DE PAREDE - SAFIRA</td>
-                  <td>R$166,00</td>
-                  <td>0</td>
+                  <td className="name-cell">PAPEL DE PAREDE - SAFIRA <i onClick={e=>tableShow(e)} title="expandir informação do produto" className="fa fa-eye show-information d-block d-sm-none"></i></td>
+                  <td className="d-none d-sm-table-cell" >R$166,00</td>
+                  <td className="d-none d-sm-table-cell">0</td>
                 </tr>
+								<tr className=" infos ">
+									<td className=" info-cell "colSpan="4 ">
+										<p> <strong>Preço de venda</strong>: R$166,00</p>
+										<p> <strong>Estoque</strong>: 0</p>
+									</td>
+								</tr>
                 <tr>
                   <th className="radio-cell" scope="row"><input type="checkbox" name="input-header" id="input-header"/></th>
-                  <td>Papel de Parede - Sophie Conran II</td>
-                  <td>R$1.609,00</td>
-                  <td>0</td>
+                  <td className="name-cell">Papel de Parede - Sophie Conran II <i onClick={e=>tableShow(e)} title="expandir informação do produto" className="fa fa-eye show-information d-block d-sm-none"></i></td>
+                  <td className="d-none d-sm-table-cell">R$1.609,00</td>
+                  <td className="d-none d-sm-table-cell">0</td>
                 </tr>
+								<tr className=" infos ">
+									<td className=" info-cell "colSpan="4 ">
+										<p> <strong>Preço de venda</strong>: R$1609,00</p>
+										<p> <strong>Estoque</strong>: 0</p>
+									</td>
+								</tr>
                 <tr>
                   <th className="radio-cell" scope="row"><input type="checkbox" name="input-header" id="input-header"/></th>
-                  <td>Hunter Douglas</td>
-                  <td>R$20,00</td>
-                  <td>190</td>
+								  <td className="name-cell">Hunter Douglas <i onClick={e=>tableShow(e)} title="expandir informação do produto" className="fa fa-eye show-information d-block d-sm-none"></i></td>
+                  <td className="d-none d-sm-table-cell">R$20,00</td>
+                  <td className="d-none d-sm-table-cell">190</td>
                 </tr>
+								<tr className=" infos ">
+									<td className=" info-cell "colSpan="4 ">
+										<p> <strong>Preço de venda</strong>: R$20,00</p>
+										<p> <strong>Estoque</strong>: 190</p>
+									</td>
+								</tr>
               </tbody>
             </table>
           </div>
@@ -176,5 +194,18 @@ class ProductRegister extends Component {
     );
   }
 }
+
+function tableShow(e){
+	const el = e.target;
+	const td = el.parentNode;
+	const tr = td.parentNode;
+	const infos = tr.nextSibling;
+	if(infos.classList.contains('table-row-show')){
+		infos.classList.remove('table-row-show')
+	}else{
+		infos.classList.add('table-row-show')
+	}
+}
+
 
 export default ProductRegister;

@@ -5,6 +5,23 @@ class ProductRegister extends Component {
   constructor(props) {
     super(props);
   }
+
+  componentDidMount() {
+    const checks = document.querySelectorAll('input[type="checkbox"]');
+    checks[0].addEventListener("click", function(e){
+      
+      if(checks[0].checked==true){
+        checks.forEach(input => {
+          input.checked = true;
+        })
+
+      }else{
+        checks.forEach(input => {
+          input.checked = false;
+        })
+      }
+    })
+  }
   render() {
     return (
       <main className="main">
@@ -100,8 +117,8 @@ class ProductRegister extends Component {
           </div>
           <div className="row mb-3">
             <button className="btn btn-primary mr-2">Incluir Produto</button>
-            <button className="btn btn-outline-info mr-2">
-              <i className="fa fa-print styled-icon" /> Imprimir
+            <button className="btn btn-outline-info  d-none d-sm-block mr-2">
+              <i className="fa fa-print styled-icon " /> Imprimir
             </button>
             <div className="dropdown">
               <button
@@ -114,27 +131,50 @@ class ProductRegister extends Component {
               >
                 Mais ações
               </button>
-              <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <div
+                className="dropdown-menu"
+                aria-labelledby="dropdownMenuButton"
+              >
                 {/* eslint-disable-next-line */}
-                <a className="dropdown-item a-from-nav " href="javascript:void(0)">
+                <a
+                  className="dropdown-item a-from-nav "
+                  href="javascript:void(0)"
+                >
                   <i className="fa fa-dollar styled-icon" />
                   Reajustar preços dos produtos
                 </a>
                 {/* eslint-disable-next-line */}
-                <a className="dropdown-item a-from-nav" href="javascript:void(0)">
+                <a
+                  className="dropdown-item a-from-nav"
+                  href="javascript:void(0)"
+                >
                   <i className="fa fa-edit styled-icon" />
                   Editar CEST dos produtos em lote
                 </a>
                 <div className="dropdown-divider" />
                 {/* eslint-disable-next-line */}
-                <a className="dropdown-item a-from-nav" href="javascript:void(0)">
+                <a
+                  className="dropdown-item a-from-nav"
+                  href="javascript:void(0)"
+                >
                   <i className="fa fa-upload styled-icon" />
                   Exportar produtos para planilha
                 </a>
                 {/* eslint-disable-next-line */}
-                <a className="dropdown-item a-from-nav" href="javascript:void(0)">
+                <a
+                  className="dropdown-item a-from-nav"
+                  href="javascript:void(0)"
+                >
                   <i className="fa fa-download styled-icon" />
                   Importar produtos de uma planilha
+                </a>
+                <div className="dropdown-divider" />
+                <a
+                  className="dropdown-item a-from-nav"
+                  href="javascript:void(0)"
+                >
+                  <i className="fa fa-print styled-icon" />
+                  Imprimir
                 </a>
               </div>
             </div>
@@ -143,49 +183,116 @@ class ProductRegister extends Component {
             <table className="table table-hover">
               <thead>
                 <tr>
-                  <th className="radio-cell" scope="col"><input type="checkbox" name="input-header" id="input-header"/></th>
+                  <th className="radio-cell" scope="col">
+                    <input
+                      type="checkbox"
+                      name="input-header"
+                      id="input-header"
+                    />
+                  </th>
                   <th scope="col">Nome</th>
-                  <th className="d-none d-sm-table-cell" scope="col">Preço de Venda</th>
-                  <th className="d-none d-sm-table-cell" scope="col">Estoque</th>
+                  <th className="d-none d-sm-table-cell" scope="col">
+                    Preço de Venda
+                  </th>
+                  <th className="d-none d-sm-table-cell" scope="col">
+                    Estoque
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <th className="radio-cell"scope="row"><input type="checkbox" name="input-header" id="input-header"/></th>
-                  <td className="name-cell">PAPEL DE PAREDE - SAFIRA <i onClick={e=>tableShow(e)} title="expandir informação do produto" className="fa fa-eye show-information d-block d-sm-none"></i></td>
-                  <td className="d-none d-sm-table-cell" >R$166,00</td>
+                  <th className="radio-cell" scope="row">
+                    <input
+                      type="checkbox"
+                      name="input-header"
+                      id="input-header"
+                    />
+                  </th>
+                  <td className="name-cell">
+                    PAPEL DE PAREDE - SAFIRA{" "}
+                    <i
+                      onClick={e => tableShow(e)}
+                      title="expandir informação do produto"
+                      className="fa fa-eye show-information d-block d-sm-none"
+                    />
+                  </td>
+                  <td className="d-none d-sm-table-cell">R$166,00</td>
                   <td className="d-none d-sm-table-cell">0</td>
                 </tr>
-								<tr className=" infos ">
-									<td className=" info-cell "colSpan="4 ">
-										<p> <strong>Preço de venda</strong>: R$166,00</p>
-										<p> <strong>Estoque</strong>: 0</p>
-									</td>
-								</tr>
+                <tr className=" infos ">
+                  <td className=" info-cell " colSpan="4 ">
+                    <p>
+                      {" "}
+                      <strong>Preço de venda</strong>: R$166,00
+                    </p>
+                    <p>
+                      {" "}
+                      <strong>Estoque</strong>: 0
+                    </p>
+                  </td>
+                </tr>
                 <tr>
-                  <th className="radio-cell" scope="row"><input type="checkbox" name="input-header" id="input-header"/></th>
-                  <td className="name-cell">Papel de Parede - Sophie Conran II <i onClick={e=>tableShow(e)} title="expandir informação do produto" className="fa fa-eye show-information d-block d-sm-none"></i></td>
+                  <th className="radio-cell" scope="row">
+                    <input
+                      type="checkbox"
+                      name="input-header"
+                      id="input-header"
+                    />
+                  </th>
+                  <td className="name-cell">
+                    Papel de Parede - Sophie Conran II{" "}
+                    <i
+                      onClick={e => tableShow(e)}
+                      title="expandir informação do produto"
+                      className="fa fa-eye show-information d-block d-sm-none"
+                    />
+                  </td>
                   <td className="d-none d-sm-table-cell">R$1.609,00</td>
                   <td className="d-none d-sm-table-cell">0</td>
                 </tr>
-								<tr className=" infos ">
-									<td className=" info-cell "colSpan="4 ">
-										<p> <strong>Preço de venda</strong>: R$1609,00</p>
-										<p> <strong>Estoque</strong>: 0</p>
-									</td>
-								</tr>
+                <tr className=" infos ">
+                  <td className=" info-cell " colSpan="4 ">
+                    <p>
+                      {" "}
+                      <strong>Preço de venda</strong>: R$1609,00
+                    </p>
+                    <p>
+                      {" "}
+                      <strong>Estoque</strong>: 0
+                    </p>
+                  </td>
+                </tr>
                 <tr>
-                  <th className="radio-cell" scope="row"><input type="checkbox" name="input-header" id="input-header"/></th>
-								  <td className="name-cell">Hunter Douglas <i onClick={e=>tableShow(e)} title="expandir informação do produto" className="fa fa-eye show-information d-block d-sm-none"></i></td>
+                  <th className="radio-cell" scope="row">
+                    <input
+                      type="checkbox"
+                      name="input-header"
+                      id="input-header"
+                    />
+                  </th>
+                  <td className="name-cell">
+                    Hunter Douglas{" "}
+                    <i
+                      onClick={e => tableShow(e)}
+                      title="expandir informação do produto"
+                      className="fa fa-eye show-information d-block d-sm-none"
+                    />
+                  </td>
                   <td className="d-none d-sm-table-cell">R$20,00</td>
                   <td className="d-none d-sm-table-cell">190</td>
                 </tr>
-								<tr className=" infos ">
-									<td className=" info-cell "colSpan="4 ">
-										<p> <strong>Preço de venda</strong>: R$20,00</p>
-										<p> <strong>Estoque</strong>: 190</p>
-									</td>
-								</tr>
+                <tr className=" infos ">
+                  <td className=" info-cell " colSpan="4 ">
+                    <p>
+                      {" "}
+                      <strong>Preço de venda</strong>: R$20,00
+                    </p>
+                    <p>
+                      {" "}
+                      <strong>Estoque</strong>: 190
+                    </p>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -195,17 +302,16 @@ class ProductRegister extends Component {
   }
 }
 
-function tableShow(e){
-	const el = e.target;
-	const td = el.parentNode;
-	const tr = td.parentNode;
-	const infos = tr.nextSibling;
-	if(infos.classList.contains('table-row-show')){
-		infos.classList.remove('table-row-show')
-	}else{
-		infos.classList.add('table-row-show')
-	}
+function tableShow(e) {
+  const el = e.target;
+  const td = el.parentNode;
+  const tr = td.parentNode;
+  const infos = tr.nextSibling;
+  if (infos.classList.contains("table-row-show")) {
+    infos.classList.remove("table-row-show");
+  } else {
+    infos.classList.add("table-row-show");
+  }
 }
-
 
 export default ProductRegister;

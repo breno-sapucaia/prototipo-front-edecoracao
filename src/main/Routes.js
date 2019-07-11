@@ -12,9 +12,6 @@ export default props =>
             component={item.component} />
         )}
 
-        
-
-
         <Route to='/cadastros/produtos/novo' exact={true} component={ProductRegister} />
         <Route to="/" component={Index} />
         {/* <Redirect from='*' to="/" /> */}

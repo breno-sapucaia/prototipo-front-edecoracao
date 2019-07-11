@@ -5,7 +5,7 @@ import './App.css'
 import Routes from './Routes'
 import { BrowserRouter as Router } from 'react-router-dom'
 
-import { items, register, salles, dashboard } from './LinkOptions'
+import { items, all, register, salles, dashboard } from './LinkOptions'
 
 export default class App extends Component {
 
@@ -19,6 +19,7 @@ export default class App extends Component {
     this.state = {
       toggleMenu: true,
       items: items,
+      allItems: all(),
       staticItems: dashboard(),
       legendActive: false
     };
@@ -72,7 +73,7 @@ export default class App extends Component {
             items={this.state.staticItems}
           />
 
-          <Routes items={this.state.items} />
+          <Routes allItems={this.state.allItems} />
         </div>
       </Router>
     );

@@ -1,30 +1,21 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router';
 import Index from '../components/template/Index/Index'
+import ProductRegister from '../components/register/Product/ProductRegister';
 export default props => 
     <Switch>
-        { props.items.dashboard.map(item => 
+        {props.allItems.map(item => 
             <Route 
-                key={item.id} 
-                exact={item.path === '/' ? true:false} 
-                path={item.path} 
-                component={item.component} />
-            )}
-        {props.items.register.map(item => 
-            <Route 
-                key={item.id} 
-                exact={item.path === '/' ? true:false} 
-                path={item.path} 
-                component={item.component} />
-            )}
-        {props.items.salles.map(item => 
-            <Route 
-                key={item.id} 
-                exact={item.path === '/' ? true:false} 
-                path={item.path} 
-                component={item.component} />
-            )}
+            key={item.id} 
+            exact={true} 
+            path={item.path} 
+            component={item.component} />
+        )}
+
         
+
+
+        <Route to='/cadastros/produtos/novo' exact={true} component={ProductRegister} />
         <Route to="/" component={Index} />
-        <Redirect from='*' to="/" />
+        {/* <Redirect from='*' to="/" /> */}
     </Switch>

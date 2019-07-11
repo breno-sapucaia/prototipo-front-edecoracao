@@ -1,4 +1,5 @@
 import Index from '../components/template/Index/Index'
+import ProductView from '../components/register/Product/ProductView'
 import ProductRegister from '../components/register/Product/ProductRegister'
 const items = {
     dashboard:[
@@ -65,8 +66,9 @@ const items = {
             name:'Produtos',
             icon:'fa fa-tags',
             path:'/cadastros/produtos',
-            component:ProductRegister
+            component:ProductView
         },
+        
         {
             id:10,
             name:'Descrição dos Produtos',
@@ -135,5 +137,13 @@ export function salles(){
 }
 export function register(){
     return items.register
+}
+export function all(){
+    const allItems = items.register;
+    allItems.push(...items.salles)
+    allItems.push(...items.dashboard)
+    
+    return allItems
+
 }
 export { items }

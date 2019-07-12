@@ -30,8 +30,8 @@ class ProductView extends Component {
       <main className="main">
         <div className="container p-3">
           <div className="row  ">
-            <h3 className="col-12 col-sm-4 col-md-4 col-lg-7">Protudos</h3>
-            <div className="input-group mb-3 col-12 col-sm-8 col-md-8 col-lg-5">
+            <h3 className="col-12 col-sm-4 col-md-4 col-lg-7 no-padding-lr">Protudos</h3>
+            <div className="input-group mb-3 col-12 col-sm-8 col-md-8 col-lg-5 no-padding-lr">
               <input
                 type="text"
                 className="form-control"

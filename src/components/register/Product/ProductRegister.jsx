@@ -110,7 +110,7 @@ class ProductRegister extends Component {
                     Origem do produto conforme o ICMS
                   </p>
                 </div>
-                <div className="col-md-4 no-padding-lr">
+                <div className="col-md-4 no-padding-lr mb-3">
                   <label htmlFor="ProductType">Tipo</label>
                   <select className="form-control" name="ProductType">
                     <option label="Simples" defaultValue="number:1">
@@ -120,7 +120,7 @@ class ProductRegister extends Component {
                 </div>
               </div>
               <div className="form-row mb-5">
-                <div className="col-md-3 custom-padding no-padding-lr">
+                <div className="col-md-3 custom-padding no-padding-lr mb-3">
                   <label htmlFor="NCM">NCM</label>
                   <input
                     type="text"
@@ -135,7 +135,7 @@ class ProductRegister extends Component {
                     Nomencalutra comum do mercosul
                   </p>
                 </div>
-                <div className="col-md-3 custom-padding  no-padding-lr">
+                <div className="col-md-3 custom-padding  no-padding-lr mb-3">
                   <label htmlFor="Sellprice">Preço de custo</label>
                   <div className="input-group">
                     <div className="input-group-prepend">
@@ -149,7 +149,7 @@ class ProductRegister extends Component {
                     />
                   </div>
                 </div>
-                <div className="col-md-3 custom-padding  no-padding-lr">
+                <div className="col-md-3 custom-padding  no-padding-lr mb-3">
                   <label htmlFor="SellCost">Preço de venda</label>
                   <div className="input-group">
                     <div className="input-group-prepend">
@@ -181,7 +181,7 @@ class ProductRegister extends Component {
               <h4 className="mb-3">Expedição</h4>
               <hr className="mb-4" />
               <div className="form-row mb-3">
-                <div className="col-md-4 no-padding-lr custom-padding">
+                <div className="col-md-4 no-padding-lr custom-padding mb-3">
                   <label htmlFor="gtin">GTIN/EAN</label>
                   <input
                     type="text"
@@ -197,7 +197,7 @@ class ProductRegister extends Component {
                     Global Trade Item Number
                   </p>
                 </div>
-                <div className="col-md-4 no-padding-lr custom-padding">
+                <div className="col-md-4 no-padding-lr custom-padding mb-3">
                   <label htmlFor="gtin">GTIN/EAN da embalagem</label>
                   <input
                     type="text"
@@ -228,7 +228,7 @@ class ProductRegister extends Component {
                 </div>
               </div>
               <div className="form-row mb-5">
-                <div className="col-md-4 no-padding-lr custom-padding">
+                <div className="col-md-4 no-padding-lr custom-padding mb-3">
                   <label htmlFor="pesoliquido">Peso Líquido</label>
                   <div className="input-group">
                     <input
@@ -262,7 +262,7 @@ class ProductRegister extends Component {
               <h4 className="mb-4">Estoque</h4>
               <hr className="mb-3" />
               <div className="form-row">
-                <div className="col-md-3 no-padding-lr custom-padding">
+                <div className="col-md-3 no-padding-lr custom-padding mb-3 ">
                   <label htmlFor="estoqueatual">Estoque atual</label>
                   <div className="input-group">
                     <input
@@ -282,7 +282,7 @@ class ProductRegister extends Component {
                     Informar se deseja lançar o estoque inicial do protudo
                   </p>
                 </div>
-                <div className="col-md-3 no-padding-lr custom-padding">
+                <div className="col-md-3 no-padding-lr custom-padding mb-3">
                   <label htmlFor="estquemin">Estoque Mínimo</label>
                   <div className="input-group">
                     <input
@@ -302,7 +302,7 @@ class ProductRegister extends Component {
                     Quantidade mínima do produto no estoque
                   </p>
                 </div>
-                <div className="col-md-3 no-padding-lr custom-padding">
+                <div className="col-md-3 no-padding-lr custom-padding mb-3">
                   <label htmlFor="Estoque máximo">Estoque Máximo</label>
                   <div className="input-group">
                     <input

@@ -48,6 +48,8 @@ main.main{
     background-color:#fff;
     border-left:1px solid #bbb;
     padding:0;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 .row{
     margin-right:0!important;
@@ -60,6 +62,7 @@ main.main{
         "main main";
     }
 }
-.no-padding-left{
+.no-padding-lr{
     padding-left:0px !important;
+    padding-right:0px !important;
 }

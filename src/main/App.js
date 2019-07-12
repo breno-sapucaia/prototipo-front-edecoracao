@@ -21,7 +21,7 @@ export default class App extends Component {
       items: items,
       allItems: all(),
       staticItems: dashboard(),
-      legendActive: false
+      legendActive: true
     };
   }
 

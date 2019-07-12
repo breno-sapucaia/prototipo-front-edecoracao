@@ -2,6 +2,7 @@ header.header{
     z-index:3000;
     grid-area:header;
     background-color:#0065DC!important;
+    
 }
 
 .logo>img{

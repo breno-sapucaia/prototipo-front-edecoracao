@@ -13,3 +13,15 @@ margin-right:0px !important;
 label{
     margin-bottom:0px !important;
 }
+@media(min-width:768px){
+    .custom-padding{
+        padding-right:2em !important;
+    }
+}
+.legend-input{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    direction: ltr;
+    margin:0 !important;
+}

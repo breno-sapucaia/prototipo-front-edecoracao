@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import "./ProductView.css";
 class ProductView extends Component {
   //eslint-disable-next-line
@@ -7,29 +7,23 @@ class ProductView extends Component {
     super(props);
     this.state = {
       editable: false
-    }
+    };
   }
 
   componentDidMount() {
-    const checkTheader = document.querySelector("#input-Theader")
-    const checks = document.querySelectorAll('#input-header');
-    checkTheader.addEventListener("click", function(e){
-      
-      if(checkTheader.checked == true){
+    const checkTheader = document.querySelector("#input-Theader");
+    const checks = document.querySelectorAll("#input-header");
+    checkTheader.addEventListener("click", function(e) {
+      if (checkTheader.checked == true) {
         checks.forEach(input => {
           input.checked = true;
-        })
-
-      }else{
+        });
+      } else {
         checks.forEach(input => {
           input.checked = false;
-        })
+        });
       }
-    })
-
-
-
-
+    });
   }
   render() {
     return (
@@ -125,7 +119,7 @@ class ProductView extends Component {
             </ul>
           </div>
           <div className="row mb-3">
-            <Link to="/cadastros/produtos/novo" className="btn btn-primary mr-2">
+            <Link to="cadastros/produtos/novo" className="btn btn-primary mr-2">
               Incluir Produto
             </Link>
             <button className="btn btn-outline-info  d-none d-sm-block mr-2">
@@ -199,7 +193,6 @@ class ProductView extends Component {
                       type="checkbox"
                       name="input-header"
                       id="input-Theader"
-                      
                     />
                   </th>
                   <th scope="col">Nome</th>
@@ -313,17 +306,28 @@ class ProductView extends Component {
     );
   }
 }
-
-function tableShow(e) {
+async function tableShow(e) {
+  const infos = document.querySelectorAll(".table-row-show");
   const el = e.target;
   const td = el.parentNode;
   const tr = td.parentNode;
-  const infos = tr.nextSibling;
-  if (infos.classList.contains("table-row-show")) {
-    infos.classList.remove("table-row-show");
+  const info = tr.nextSibling;
+  
+  // infos.forEach(i => {
+  //   if (i.classList.contains("table-row-show") && e.target != info) {
+      
+  //     i.classList.remove("table-row-show");
+  //   }
+  // });
+
+  
+  if (info.classList.contains("table-row-show")) {
+    info.classList.remove("table-row-show");
   } else {
-    infos.classList.add("table-row-show");
+    info.classList.add("table-row-show");
   }
 }
+
+
 
 export default ProductView;

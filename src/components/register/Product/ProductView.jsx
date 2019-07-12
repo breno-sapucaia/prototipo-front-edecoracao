@@ -122,9 +122,9 @@ class ProductView extends Component {
             <Link to="cadastros/produtos/novo" className="btn btn-primary mr-2">
               Incluir Produto
             </Link>
-            <button className="btn btn-outline-info  d-none d-sm-block mr-2">
+            <a className=" btn btn-default text-primary d-none d-sm-block mr-2">
               <i className="fa fa-print styled-icon " /> Imprimir
-            </button>
+            </a>
             <div className="dropdown">
               <button
                 className="btn btn-default text-blue dropdown-toggle"
@@ -195,6 +195,12 @@ class ProductView extends Component {
                       id="input-Theader"
                     />
                   </th>
+                  <th scope="col" className="d-none d-sm-table-cell">
+                    Código
+                  </th>
+                  <th scope="col" className="d-none d-sm-table-cell">
+                    Refêrencia
+                  </th>
                   <th scope="col">Nome</th>
                   <th className="d-none d-sm-table-cell" scope="col">
                     Preço de Venda
@@ -213,6 +219,8 @@ class ProductView extends Component {
                       id="input-header"
                     />
                   </th>
+                  <td className="d-none d-sm-table-cell">69092</td>
+                  <td className="d-none d-sm-table-cell">SA41001</td>
                   <td className="name-cell">
                     PAPEL DE PAREDE - SAFIRA{" "}
                     <i
@@ -228,10 +236,16 @@ class ProductView extends Component {
                   <td className=" info-cell " colSpan="4 ">
                     <p>
                       {" "}
-                      <strong>Preço de venda</strong>: R$166,00
+                      <strong>Código</strong>: 69092
                     </p>
                     <p>
                       {" "}
+                      <strong>Refêrencia</strong>: SA41001
+                    </p>
+                    <p>
+                      <strong>Preço de venda</strong>: R$166,00
+                    </p>
+                    <p>
                       <strong>Estoque</strong>: 0
                     </p>
                   </td>
@@ -244,8 +258,10 @@ class ProductView extends Component {
                       id="input-header"
                     />
                   </th>
+                  <td className="d-none d-sm-table-cell">69087</td>
+                  <td className="d-none d-sm-table-cell">950705</td>
                   <td className="name-cell">
-                    Papel de Parede - Sophie Conran II{" "}
+                    Papel de Parede - Sophie Conran II
                     <i
                       onClick={e => tableShow(e)}
                       title="expandir informação do produto"
@@ -258,11 +274,15 @@ class ProductView extends Component {
                 <tr className=" infos ">
                   <td className=" info-cell " colSpan="4 ">
                     <p>
-                      {" "}
+                      <strong>Código</strong>: 69087
+                    </p>
+                    <p>
+                      <strong>Refêrencia</strong>: 950705
+                    </p>
+                    <p>
                       <strong>Preço de venda</strong>: R$1609,00
                     </p>
                     <p>
-                      {" "}
                       <strong>Estoque</strong>: 0
                     </p>
                   </td>
@@ -275,6 +295,8 @@ class ProductView extends Component {
                       id="input-header"
                     />
                   </th>
+                  <td className="d-none d-sm-table-cell">69081</td>
+                  <td className="d-none d-sm-table-cell">700</td>
                   <td className="name-cell">
                     Hunter Douglas{" "}
                     <i
@@ -290,10 +312,16 @@ class ProductView extends Component {
                   <td className=" info-cell " colSpan="4 ">
                     <p>
                       {" "}
-                      <strong>Preço de venda</strong>: R$20,00
+                      <strong>Código</strong>: 69081
                     </p>
                     <p>
                       {" "}
+                      <strong>Refêrencia</strong>: 700
+                    </p>
+                    <p>
+                      <strong>Preço de venda</strong>: R$20,00
+                    </p>
+                    <p>
                       <strong>Estoque</strong>: 190
                     </p>
                   </td>
@@ -301,6 +329,43 @@ class ProductView extends Component {
               </tbody>
             </table>
           </div>
+          
+            <nav aria-label="Page navigation" className="paginador">
+              <ul className="pagination">
+                <li className="page-item">
+
+                  {/* eslint-disable-next-line */}
+                  <a className="page-link" href="javascript:void(0)" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li className="page-item">
+                  {/* eslint-disable-next-line */}
+                  <a className="page-link" href="javascript:void(0)">
+                    1
+                  </a>
+                </li>
+                <li className="page-item">
+                  {/* eslint-disable-next-line */}
+                  <a className="page-link" href="javascript:void(0)">
+                    2
+                  </a>
+                </li>
+                <li className="page-item">
+                  {/* eslint-disable-next-line */}
+                  <a className="page-link" href="javascript:void(0)">
+                    3
+                  </a>
+                </li>
+                <li className="page-item">
+                  {/* eslint-disable-next-line */}
+                  <a className="page-link" href="javascript:void(0)" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          
         </div>
       </main>
     );
@@ -312,23 +377,20 @@ async function tableShow(e) {
   const td = el.parentNode;
   const tr = td.parentNode;
   const info = tr.nextSibling;
-  
+
   infos.forEach(i => {
     if (i.classList.contains("table-row-show") && i != info) {
       i.classList.remove("table-row-show");
-    }else{
+    } else {
       i.classList.add("table-row-show");
     }
   });
 
-  
   if (info.classList.contains("table-row-show")) {
     info.classList.remove("table-row-show");
   } else {
     info.classList.add("table-row-show");
   }
 }
-
-
 
 export default ProductView;

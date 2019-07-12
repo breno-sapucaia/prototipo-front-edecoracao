@@ -325,8 +325,8 @@ class ProductRegister extends Component {
                 <div className="col-md-3 no-padding-lr">
                   <label htmlFor="controlarestoque">Controlar Estoque</label>
                   <select name="controlarestoque" id="controlarestoque" className="form-control">
-                    <option defaultvalue="1">Sim</option>
-                    <option defaultvalue="-1">Não</option>
+                    <option defaultValue="1">Sim</option>
+                    <option defaultValue="-1">Não</option>
                   </select>
                 </div>
               </div>

@@ -313,12 +313,13 @@ async function tableShow(e) {
   const tr = td.parentNode;
   const info = tr.nextSibling;
   
-  // infos.forEach(i => {
-  //   if (i.classList.contains("table-row-show") && e.target != info) {
-      
-  //     i.classList.remove("table-row-show");
-  //   }
-  // });
+  infos.forEach(i => {
+    if (i.classList.contains("table-row-show") && i != info) {
+      i.classList.remove("table-row-show");
+    }else{
+      i.classList.add("table-row-show");
+    }
+  });
 
   
   if (info.classList.contains("table-row-show")) {

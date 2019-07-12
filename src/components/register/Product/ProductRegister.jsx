@@ -123,12 +123,17 @@ class ProductRegister extends Component {
                 <div className="col-md-3 custom-padding no-padding-lr">
                   <label htmlFor="NCM">NCM</label>
                   <input
-										type="text"
+                    type="text"
                     className="form-control "
-										placeholder="(Exemplo:1001.10.10)"
-										id="NCM"
+                    placeholder="(Exemplo:1001.10.10)"
+                    id="NCM"
                   />
-                  <p className="text-muted legend-input" title="Nomencalutra comum do mercosul" >Nomencalutra comum do mercosul</p>
+                  <p
+                    className="text-muted legend-input"
+                    title="Nomencalutra comum do mercosul"
+                  >
+                    Nomencalutra comum do mercosul
+                  </p>
                 </div>
                 <div className="col-md-3 custom-padding  no-padding-lr">
                   <label htmlFor="Sellprice">Preço de custo</label>
@@ -139,8 +144,8 @@ class ProductRegister extends Component {
                     <input
                       type="text"
                       className="form-control "
-											placeholder="192.00"
-											id="Sellprice"
+                      placeholder="192.00"
+                      id="Sellprice"
                     />
                   </div>
                 </div>
@@ -153,48 +158,184 @@ class ProductRegister extends Component {
                     <input
                       type="text"
                       className="form-control "
-											placeholder="192.00"
-											id="SellCost"
+                      placeholder="192.00"
+                      id="SellCost"
                     />
                   </div>
                 </div>
-								<div className="col-md-3 s no-padding-lr ">
+                <div className="col-md-3 s no-padding-lr ">
                   <label htmlFor="Unity">Unidae</label>
-									<div className="input-group">
-										<select className="form-control"name="ProductUnity" id="Unity">
-											<option defaultValue="ML">ML</option>
-											<option defaultValue="M2">M²</option>
-											<option defaultValue="Rolo">Rolo</option>
-										</select>
-									</div>
+                  <div className="input-group">
+                    <select
+                      className="form-control"
+                      name="ProductUnity"
+                      id="Unity"
+                    >
+                      <option defaultValue="ML">ML</option>
+                      <option defaultValue="M2">M²</option>
+                      <option defaultValue="Rolo">Rolo</option>
+                    </select>
+                  </div>
                 </div>
               </div>
-							<h4 className="mb-3">Expedição</h4>
-							<hr className="mb-4"/>
-							<div className="form-row">
-								<div className="col-md-4 no-padding-lr custom-padding">
-									<label htmlFor="gtin">GTIN/EAN</label>
-									<input type="text" className='form-control' name="gtin" id="gtin" placeholder="Código de barras"/>
-									<p className="text-muted legend-input" title="Global Trade Item Number">Global Trade Item Number</p>
-
-								</div>
-								<div className="col-md-4 no-padding-lr custom-padding">
-									<label htmlFor="gtin">GTIN/EAN da embalagem</label>
-									<input type="text" className='form-control' name="gtin" id="gtin" placeholder="Código de barras da comercialização"/>
-									<p className="legend-input text-muted" title="GTIN-14">GTIN-14</p>
-
-								</div>
-								<div className="col-md-4 no-padding-lr ">
-									<label htmlFor="gtin">Localização</label>
-									<input type="text" className='form-control' name="gtin" id="gtin" placeholder="Ex: corredor A"/>
-									<p className="legend-input text-muted" title="Localização física no estoque">Localização física no estoque</p>
-
-								</div>
-							</div>
-							<div className="form-row">
-								<div className="col-md-4 no-padding-lr custom-padding"></div>
-							</div>
+              <h4 className="mb-3">Expedição</h4>
+              <hr className="mb-4" />
+              <div className="form-row mb-3">
+                <div className="col-md-4 no-padding-lr custom-padding">
+                  <label htmlFor="gtin">GTIN/EAN</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="gtin"
+                    id="gtin"
+                    placeholder="Código de barras"
+                  />
+                  <p
+                    className="text-muted legend-input"
+                    title="Global Trade Item Number"
+                  >
+                    Global Trade Item Number
+                  </p>
+                </div>
+                <div className="col-md-4 no-padding-lr custom-padding">
+                  <label htmlFor="gtin">GTIN/EAN da embalagem</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="gtin"
+                    id="gtin"
+                    placeholder="Código de barras da comercialização"
+                  />
+                  <p className="legend-input text-muted" title="GTIN-14">
+                    GTIN-14
+                  </p>
+                </div>
+                <div className="col-md-4 no-padding-lr ">
+                  <label htmlFor="gtin">Localização</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="gtin"
+                    id="gtin"
+                    placeholder="Ex: corredor A"
+                  />
+                  <p
+                    className="legend-input text-muted"
+                    title="Localização física no estoque"
+                  >
+                    Localização física no estoque
+                  </p>
+                </div>
+              </div>
+              <div className="form-row mb-5">
+                <div className="col-md-4 no-padding-lr custom-padding">
+                  <label htmlFor="pesoliquido">Peso Líquido</label>
+                  <div className="input-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="pesoliquido"
+                      id="pesoliquido"
+                      placeholder="Em kg"
+                    />
+                    <div className="input-group-append">
+                      <span className="input-group-text">kg</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-4 no-padding-lr custom-padding">
+                  <label htmlFor="pesobruto">Peso Bruto</label>
+                  <div className="input-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="pesobruto"
+                      id="pesobruto"
+                      placeholder="Em kg"
+                    />
+                    <div className="input-group-append">
+                      <span className="input-group-text">kg</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h4 className="mb-4">Estoque</h4>
+              <hr className="mb-3" />
+              <div className="form-row">
+                <div className="col-md-3 no-padding-lr custom-padding">
+                  <label htmlFor="estoqueatual">Estoque atual</label>
+                  <div className="input-group">
+                    <input
+                      type="text"
+                      name="estoqueatual"
+                      id="estoqueatual"
+                      className="form-control"
+                    />
+                    <div className="input-group-append">
+                      <span className="input-group-text">un</span>
+                    </div>
+                  </div>
+                  <p
+                    className="legend-input text-muted"
+                    title="Informar se deseja lançar o estoque inicial do protudo"
+                  >
+                    Informar se deseja lançar o estoque inicial do protudo
+                  </p>
+                </div>
+                <div className="col-md-3 no-padding-lr custom-padding">
+                  <label htmlFor="estquemin">Estoque Mínimo</label>
+                  <div className="input-group">
+                    <input
+                      type="text"
+                      name="estquemin"
+                      id="estquemin"
+                      className="form-control"
+                    />
+                    <div className="input-group-append">
+                      <span className="input-group-text">un</span>
+                    </div>
+                  </div>
+                  <p
+                    className="legend-input text-muted"
+                    title="Quantidade mínima do produto no estoque"
+                  >
+                    Quantidade mínima do produto no estoque
+                  </p>
+                </div>
+                <div className="col-md-3 no-padding-lr custom-padding">
+                  <label htmlFor="Estoque máximo">Estoque Máximo</label>
+                  <div className="input-group">
+                    <input
+                      type="text"
+                      name="Estoque máximo"
+                      id="Estoque máximo"
+                      className="form-control"
+                    />
+                    <div className="input-group-append">
+                      <span className="input-group-text">un</span>
+                    </div>
+                  </div>
+                  <p
+                    className="legend-input text-muted"
+                    title="Quantidade máxima do produto no estoque"
+                  >
+                    Quantidade máxima do produto no estoque
+                  </p>
+                </div>
+                <div className="col-md-3 no-padding-lr">
+                  <label htmlFor="controlarestoque">Controlar Estoque</label>
+                  <select name="controlarestoque" id="controlarestoque" className="form-control">
+                    <option defaultvalue="1">Sim</option>
+                    <option defaultvalue="-1">Não</option>
+                  </select>
+                </div>
+              </div>
             </form>
+            <div className="row mt-3">
+              <button className="btn btn-primary mr-2 ">Salvar</button>
+              <button className="btn btn-secondary">Cancelar</button>
+            </div>
+
           </div>
         </div>
       </main>

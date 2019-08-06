@@ -81,3 +81,17 @@
     position:absolute;
     bottom:0;
 }
+.seta{
+    margin-left:5px;
+    height:20px;
+    width:30px;
+}
+.seta img{
+    position:relative;
+    margin-top:10px;
+    width:100%;
+}
+.counter{
+    
+    font-size:1.5em;
+}

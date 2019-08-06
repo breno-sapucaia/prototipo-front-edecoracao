@@ -15,11 +15,11 @@ class ProductView extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(bool) {
+  handleClick(obj) {
     this.setState({
-      isSelected: bool
+      isSelected: obj.bool,
+      selected: obj.cont
     });
-    console.log(this.state.isSelected);
   }
 
   componentDidMount() {
@@ -27,11 +27,12 @@ class ProductView extends Component {
     const checkTheader = document.querySelector("#input-Theader");
     const checks = document.querySelectorAll("#input-header");
     
+    checkTheader.addEventListener("click", () => {
+      this.handleClick(handleChecks(checks))
+    });
     checks.forEach(check => {
       check.addEventListener("click", () => {
-          let bool =  handleChecks(checks)
-          this.handleClick(bool)
-          
+          this.handleClick(handleChecks(checks))
         });
       });
   }
@@ -218,7 +219,7 @@ class ProductView extends Component {
             </div>
           </div>
 
-          <div className="row mb-3 ">
+          <div className={this.state.isSelected ? 'd-none':'row mb-3 '}>
             <Link to="cadastros/produtos/novo" className="btn btn-primary mr-2">
               Incluir Produto
             </Link>
